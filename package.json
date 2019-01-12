@@ -1,0 +1,24 @@
+{
+  "name": "CafeKiwiV2",
+  "version": "1.0.0",
+  "description": "CafeKiwi Discord bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terraglacium/CafeKiwiV2.git"
+  },
+  "keywords": [],
+  "author": "Andy Ren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terraglacium/CafeKiwiV2/issues"
+  },
+  "homepage": "https://github.com/terraglacium/CafeKiwiV2#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "eslint": "^5.12.0"
+  }
+}
