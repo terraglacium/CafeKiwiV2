@@ -9,8 +9,9 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 
 for(const file of commandFiles) {
     const command = require(`./commands/${file}`);
-
+    // different from the command below...
     client.commands.set(command.name, command);
+    // command.name is the name of the object, command is the object.
 }
 
 client.once('ready', () => {
@@ -27,12 +28,14 @@ client.on('message', message => {
 
     console.log(message.content);
     const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+    const commandName = args.shift().toLowerCase();
 
-    if(!client.commands.has(command)) return;
+    if(!client.commands.has(commandName)) return;
+
+    const command = client.commands.get(commandName);
 
     try {
-        client.commands.get(command).execute(message, args);
+        command.execute(message, args);
     }
     catch(error) {
         console.error(error);
