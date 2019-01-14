@@ -1,3 +1,9 @@
+/**
+ * @file The script where CafeKiwi lives
+ * @author Andy Ren (a.k.a @terraglacium)
+ * @license MIT
+ */
+
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
