@@ -1,4 +1,4 @@
 {
     "prefix": "&",
-    "token": "some-token"
+    "token": "some-token-use-hidden-.env"
 }
