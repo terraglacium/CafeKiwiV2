@@ -7,6 +7,8 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 // require('dotenv').config();
+// npm install dotenv
+// create .env file locally
 const { prefix, token } = require('./config.json');
 //remove token
 
@@ -63,4 +65,8 @@ client.on('message', message => {
 
 });
 
-client.login(token); //use process.env.TOKEN instead to fetch hidden .env file
+// use process.env.TOKEN instead to fetch hidden .env file
+// TOKEN=
+// or use process.env.CLIENT_TOKEN
+// or process.env.DISCORD_TOKEN (v12 discord.js)
+client.login(token);
