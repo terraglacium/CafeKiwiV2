@@ -6,11 +6,8 @@
 
 const fs = require('fs');
 const Discord = require('discord.js');
-// require('dotenv').config();
-// npm install dotenv
-// create .env file locally
-const { prefix, token } = require('./config.json');
-//remove token
+require('dotenv').config();
+const { prefix } = require('./config.json');
 
 const client = new Discord.Client();
 // creates new Collection
@@ -47,7 +44,7 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
 
-    //if the Discord.Collection does not have the command object with commandName string, return
+    // if the Discord.Collection does not have the command object with commandName string, return
     if(!client.commands.has(commandName)) return;
 
     // command is variable that stores the object obtained from fetching
@@ -66,7 +63,8 @@ client.on('message', message => {
 });
 
 // use process.env.TOKEN instead to fetch hidden .env file
+// more secure method of protecting bot token
 // TOKEN=somestringwithoutquotes
 // or use process.env.CLIENT_TOKEN
 // or process.env.DISCORD_TOKEN (v12 discord.js)
-client.login(token);
+client.login(process.env.TOKEN);
