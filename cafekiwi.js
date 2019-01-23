@@ -65,6 +65,7 @@ client.on('message', message => {
 // use process.env.TOKEN instead to fetch hidden .env file
 // more secure method of protecting bot token
 // TOKEN=somestringwithoutquotes
+// leave .login() empty
 // or use process.env.CLIENT_TOKEN
 // or process.env.DISCORD_TOKEN (v12 discord.js)
 client.login(process.env.TOKEN);
