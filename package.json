@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/terraglacium/CafeKiwiV2#readme",
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^12.4.1",
     "dotenv": "^6.2.0",
     "eslint": "^5.12.0"
   }
